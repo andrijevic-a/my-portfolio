@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+  background-color: #333;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  color: #a4f644;
+  margin: 0;
+}
+
+#home {
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  color: #a4f644;
+  padding: 0.4167vw;
+  margin: 0 0.4167vw;
+}
+
+a:hover {
+  border-bottom: #a4f644 solid 0.2083vw;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.67vw 6.25vw;
+  padding-left: 10vw;
+  padding-bottom: 0;
+  font-size: 1.875vw;
+  position: fixed;
+  width: 80vw;
+  z-index: 5;
+  background: #333;
+  box-shadow: 0 1.25vw 1.67vw 0.83vw #333;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom: 0;
+  padding-top: 2.083vw;
+  margin-top: 2.083vw;
+  border-top: #a4f644 dashed 0.2083vw;
+  z-index: 3;
+  background: #333;
+}
+
+footer a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25vw;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6.25vw;
+  margin-top: 9.58vw;
+}
+
+.home-section img {
+  width: 25vw;
+
+}
+
+.home-section .welcome-text {
+  width: 35vw;
+}
+
+h2 {
+  font-size: 3.75vw;
+  font-weight: 800;
+}
+
+.home-section p {
+  font-size: 1.67vw;
+  font-weight: 500;
+  /* text-align: justify; */
+}
+
+#tech-stack {
+  align-self: center;
+}
+
+#tech-stack h3 {
+  text-align: center;
+  font-size: 3.125vw;
+}
+
+#tech-stack .img-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 37.5vw;
+}
+
+#tech-stack .img-container img {
+  height: 6.25vw;
+}
+
+/* About Me */
+
+.about-me-section {
+  text-align: justify;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 12.83vw;
+}
+
+.about-me-section .group {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* .about-me-section .group:nth-child(odd) {
+  border-right: #a4f644 dotted 0.4167vw;
+  align-self: flex-start;
+}
+
+.about-me-section .group:nth-child(even) {
+  border-left: #a4f644 dotted 0.4167vw;
+  align-self: flex-end;
+} */
+
+.about-me-section .group .container-l,
+.about-me-section .group .container-r {
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.text-container-l,
+.text-container-r {
+  margin: 0 9.375vw;
+  width: 35.5vw;
+  border: #a4f644 dotted 0.2083vw;
+  padding: 1vw 2vw;
+}
+
+.text-container-l {
+  margin-right: 0;
+}
+.text-container-r {
+  margin-left: 0;
+}
+
+.blank-container {
+  border-bottom: #a4f644 dotted 0.2083vw;
+  width: 6.25vw;
+  height: 2vw;
+  /* background: blue; */
+}
+
+.about-me-section .group:nth-of-type(odd) .text-container-l,
+.about-me-section .group:nth-of-type(even) .text-container-r {
+  border: none;
+}
+
+.text-container {
+  align-self: center;
+  margin: 4.25vw;
+  width: 38vw;
+  border: #a4f644 dotted 0.2083vw;
+  padding: 1vw 2vw;
+  z-index: 4;
+  background-color: #333;
+}
+
+.about-me-section .line {
+  width: 0.2083vw;
+  height: 274vw;
+  position: fixed;
+  z-index: 2;
+  background: url('./img/bg.svg');
+  background-size: contain;
+  /* top: 242;
+  bottom: 30vh; */
+}
