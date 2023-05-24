@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./form.js" defer></script>
+    <title>My Portfolio | Aleksandar Andrijević</title>
+  </head>
+  <body>
+    <div id="home">
+      <nav>
+        <a href="./index.html" class="home-btn"
+          >My Portfolio | Aleksandar Andrijević</a
+        >
+        <div class="container">
+          <a href="./about-me.html">About Me</a>
+          <a href="./my-projects.html">My Projects</a>
+          <a class="selected" href="./contact.html">Contact & Hire</a>
+        </div>
+      </nav>
+      <section class="contact-section">
+        <div class="contact-container">
+          <h4>Contact me via:</h4>
+          <div class="group">
+            <img src="./img/phone.png" alt="" />
+            <!-- <p>
+              Phone: </p> -->
+            <a href="tel:+381652128200">Phone: +381 65 21 28 200</a>
+          </div>
+          <div class="group">
+            <img src="./img/email.png" alt="">
+            <!-- <p>E-mail:</p> -->
+            <a href="mailto:aleksandarandrijevic@gmail.com"
+              >E-Mail: aleksandarandrijevic@gmail.com</a
+            >
+          </div>
+          <div class="group">
+            <img src="./img/linkedin.png" alt=""
+            />
+            <a href="www.linkedin.com/in/aleksandar-andrijević-6013981b7/"
+              >LinkedIn</a>
+          </div>
+          <div class="group">
+            <img src="./img/upwork.png" alt="" />
+            <a href="https://www.upwork.com/freelancers/~01554d1a8d97a5c142"
+            >Upwork</a
+            >
+          </div>
+          <div id="download">
+            <h5><a href="./content/resume.pdf">Click here</a> to download my resume -></h5>
+            <a href="./content/resume.pdf"><img src="./img/resume.png" alt=""></a>
+          </div>
+        </div>
+        <div class="form-container">
+        <h4>Or simply just fill out this form:</h4>
+        <form action="POST">
+          <label id="clientNameL" for="clientName">Name</label>
+          <input type="text" placeholder="Name" name="clientName" id="clientName">
+          <label id="clientEmailL" for="clientEmail">E-mail</label>
+          <input type="email" placeholder="name@email.com" name="clientEmail" id="clientEmail">
+          <label id="emailTextL" for="emailText">Message</label>
+          <textarea name="emailText" placeholder="Your message..." id="emailText"></textarea>
+          <button type="submit" value="Send">Send</button>
+        </form>
+      </div>
+      </section>
+
+      <footer>
+        <div class="footer-container">
+          <a href=""
+            ><img src="./img/github.png" alt="GitHub" />
+            <p>/andrijevic-a</p></a
+          >
+          <a href="www.linkedin.com/in/aleksandar-andrijević-6013981b7/"
+            ><img src="./img/linkedin.png" alt="LinkedIn" />
+            <p>/aleksandar-andrijević</p></a
+          >
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
