@@ -1,84 +1,36 @@
-// window.addEventListener('scroll', function() {
-//   const aboutMeSection = document.querySelector('.about-me-section');
-//   const groups = aboutMeSection.querySelectorAll('.group');
+const handleScrollAnimation = (groups, windowHeight, scrollPosition) => {
+  groups.forEach(function(group) {
+    const groupTop = group.offsetTop;
+    const groupHeight = group.offsetHeight;
 
-//   const sectionTop = aboutMeSection.offsetTop;
-//   const sectionHeight = aboutMeSection.offsetHeight;
-//   const windowHeight = window.innerHeight;
-//   const scrollPosition = window.scrollY || window.pageYOffset;
-
-//   if (scrollPosition > sectionTop - windowHeight && scrollPosition < sectionTop + sectionHeight) {
-//     groups.forEach(function(group) {
-//       group.style.opacity = '1';
-//     });
-//   } else {
-//     groups.forEach(function(group) {
-//       group.style.opacity = '0';
-//     });
-//   }
-// });
-
-
-// window.addEventListener('scroll', function() {
-//   const aboutMeSection = document.querySelector('.about-me-section');
-//   const groups = aboutMeSection.querySelectorAll('.group');
-
-//   const sectionTop = aboutMeSection.offsetTop;
-//   const sectionHeight = aboutMeSection.offsetHeight;
-//   const windowHeight = window.innerHeight;
-//   const scrollPosition = window.scrollY || window.pageYOffset;
-
-//   groups.forEach(function(group, index) {
-//     const groupTop = group.offsetTop;
-//     const groupHeight = group.offsetHeight;
-
-//     if (scrollPosition > groupTop - windowHeight + groupHeight && scrollPosition < groupTop + groupHeight) {
-//       group.style.opacity = '1';
-//     } else {
-//       group.style.opacity = '0';
-//     }
-//   });
-// });
-
+    if (scrollPosition > groupTop - windowHeight + groupHeight && scrollPosition < groupTop + groupHeight) {
+      group.style.opacity = '1';
+    } else {
+      group.style.opacity = '0';
+    }
+  });
+}
 
 window.addEventListener('DOMContentLoaded', function() {
-  const aboutMeSection = document.querySelector('.about-me-section');
-  const groups = aboutMeSection.querySelectorAll('.group');
+  const leftSideSection = document.querySelector('.left-side');
+  const leftSideGroups = leftSideSection.querySelectorAll('.container-l');
+  
+  const rightSideSection = document.querySelector('.right-side');
+  const rightSideGroups = rightSideSection.querySelectorAll('.container-r');
 
-  const sectionTop = aboutMeSection.offsetTop;
-  const sectionHeight = aboutMeSection.offsetHeight;
+  const centerSection = document.querySelector('.about-me-section');
+  const centerGroups = centerSection.querySelectorAll('.text-container');
+  
   const windowHeight = window.innerHeight;
-  const scrollPosition = window.scrollY || window.pageYOffset;
 
-  groups.forEach(function(group, index) {
-    const groupTop = group.offsetTop;
-    const groupHeight = group.offsetHeight;
+  const scrollHandler = () => {
+    const scrollPosition = window.scrollY || window.pageYOffset;
+    
+    handleScrollAnimation(leftSideGroups, windowHeight, scrollPosition);
+    handleScrollAnimation(rightSideGroups, windowHeight, scrollPosition);
+    handleScrollAnimation(centerGroups, windowHeight, scrollPosition);
+  }
 
-    if (scrollPosition > groupTop - windowHeight + groupHeight && scrollPosition < groupTop + groupHeight) {
-      group.style.opacity = '1';
-    } else {
-      group.style.opacity = '0';
-    }
-  });
-});
-
-window.addEventListener('scroll', function() {
-  const aboutMeSection = document.querySelector('.about-me-section');
-  const groups = aboutMeSection.querySelectorAll('.group');
-
-  const sectionTop = aboutMeSection.offsetTop;
-  const sectionHeight = aboutMeSection.offsetHeight;
-  const windowHeight = window.innerHeight;
-  const scrollPosition = window.scrollY || window.pageYOffset;
-
-  groups.forEach(function(group, index) {
-    const groupTop = group.offsetTop;
-    const groupHeight = group.offsetHeight;
-
-    if (scrollPosition > groupTop - windowHeight + groupHeight && scrollPosition < groupTop + groupHeight) {
-      group.style.opacity = '1';
-    } else {
-      group.style.opacity = '0';
-    }
-  });
+  window.addEventListener('scroll', scrollHandler);
+  scrollHandler(); // Trigger the initial animation state
 });
