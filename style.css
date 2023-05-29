@@ -88,6 +88,14 @@ p {
   z-index: 2;
 }
 
+#my-projects {
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 2;
+}
+
 a {
   text-decoration: none;
   color: #a4f644;
