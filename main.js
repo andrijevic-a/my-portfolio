@@ -27,7 +27,7 @@
 // };
 
 const handleScrollAnimation = (groups, windowHeight, scrollPosition) => {
-  groups.forEach(function (group) {
+  groups.forEach((group) => {
     const groupTop = group.getBoundingClientRect().top;
     const groupHeight = group.offsetHeight;
     const groupMiddle = groupTop + groupHeight / 2;
@@ -63,7 +63,7 @@ window.addEventListener('DOMContentLoaded', () => {
     } else {
       handleScrollAnimation(leftSideGroups, windowHeight, scrollPosition);
       handleScrollAnimation(leftSideRGroups, windowHeight, scrollPosition);
-      handleScrollAnimation(centerGroups, windowHeight, scrollPosition);
+      // handleScrollAnimation(centerGroups, windowHeight, scrollPosition);
     }
   };
 
