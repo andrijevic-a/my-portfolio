@@ -645,3 +645,35 @@ textarea:-webkit-autofill:focus {
   padding: 0 0.1vw;
   visibility: hidden;
 }
+
+/* Success */
+
+#success {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#success .container {
+  border: #a4f644 dotted 0.2083vw;
+  padding: 3vw;
+  background: rgba(51, 51, 51, 0.7);
+}
+
+#success .container h4 {
+  margin-top: 0;
+  font-size: 2vw;
+}
+
+#success .container p {
+  font-size: 1.6vw;
+}
+
+#success .container a {
+  margin: 0;
+  font-size: 1.6vw;
+  align-items: center;
+  align-content: center;
+}

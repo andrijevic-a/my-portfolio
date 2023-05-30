@@ -1,12 +1,38 @@
+// const handleScrollAnimation = (groups, windowHeight, scrollPosition) => {
+//   groups.forEach(function (group) {
+//     const groupTop = group.offsetTop;
+//     const groupHeight = group.offsetHeight;
+
+//     if (
+//       scrollPosition > groupTop - windowHeight + groupHeight &&
+//       scrollPosition < groupTop + groupHeight
+//     ) {
+//       group.style.opacity = '1';
+//     } else {
+//       group.style.opacity = '0';
+//     }
+//   });
+// };
+
+// const handleScrollAnimation = (groups, windowHeight, scrollPosition) => {
+//   groups.forEach(function (group) {
+//     const groupTop = group.getBoundingClientRect().top;
+
+//     if (groupTop < windowHeight) {
+//       group.style.opacity = '1';
+//     } else {
+//       group.style.opacity = '0';
+//     }
+//   });
+// };
+
 const handleScrollAnimation = (groups, windowHeight, scrollPosition) => {
   groups.forEach(function (group) {
-    const groupTop = group.offsetTop;
+    const groupTop = group.getBoundingClientRect().top;
     const groupHeight = group.offsetHeight;
+    const groupMiddle = groupTop + groupHeight / 2;
 
-    if (
-      scrollPosition > groupTop - windowHeight + groupHeight &&
-      scrollPosition < groupTop + groupHeight
-    ) {
+    if (groupMiddle < windowHeight) {
       group.style.opacity = '1';
     } else {
       group.style.opacity = '0';
