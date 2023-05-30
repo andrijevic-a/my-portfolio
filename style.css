@@ -252,7 +252,8 @@ h2 {
   align-items: flex-start;
 }
 
-.about-me-section .group {
+.about-me-section .group,
+.about-me-section .group-last {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -340,25 +341,27 @@ h2 {
   z-index: 5;
   background-color:rgba(51, 51, 51, 0.4);
   opacity: 1;
-  /* transition: opacity 0.5s ease; */
-
+  transition: opacity 0.5s ease;
 }
 
 #hw-container {
   margin: 0;
 }
 
-.about-me-section .group .text-container h3 {
+.about-me-section .group .text-container h3,
+.about-me-section .group-last .text-container h3 {
   text-align: center;
   font-size: 1.6vw;
   margin: 1vw 0;
 }
 
-.about-me-section .group .text-container p {
+.about-me-section .group .text-container p,
+.about-me-section .group-last .text-container p {
 font-size: 1.4vw;
 }
 
-.about-me-section .group .text-container .img-container {
+.about-me-section .group .text-container .img-container,
+.about-me-section .group-last .text-container .img-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -367,7 +370,8 @@ font-size: 1.4vw;
   margin-top: 1.67vw;
 }
 
-.about-me-section .group .text-container .img-container img {
+.about-me-section .group .text-container .img-container img,
+.about-me-section .group-last .text-container .img-container img {
   height: 5vw;
 }
 

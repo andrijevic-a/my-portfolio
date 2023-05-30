@@ -105,7 +105,8 @@ h2 {
 }
 
 
-.about-me-section .group {
+.about-me-section .group,
+.about-me-section .group-last {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -220,7 +221,8 @@ h2 {
   opacity: 1;
 }
 
-.about-me-section .group .text-container h3 {
+.about-me-section .group .text-container h3,
+.about-me-section .group-last .text-container h3 {
   text-align: center;
   width: fit-content;
   margin: 2vw auto;
@@ -228,12 +230,13 @@ h2 {
   font-size: 4.5vw;
 }
 
-.about-me-section .group .text-container p {
+.about-me-section .group .text-container p,
+.about-me-section .group-last .text-container p {
   background: rgba(51, 51, 51, 0.7);
   font-size: 4vw;
 }
 
-.about-me-section .group .text-container .img-container {
+.about-me-section .group-last .text-container .img-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -243,7 +246,7 @@ h2 {
   height: 10vw;
 }
 
-.about-me-section .group .text-container .img-container img {
+.about-me-section .group-last .text-container .img-container img {
   height: 6svh;
 }
 
@@ -467,4 +470,22 @@ h2 {
 .form-container form label {
   font-size: 4vw;
   padding: 0 0.5vw;
+}
+
+/* Success */
+
+#success .container h4 {
+  margin-top: 0;
+  font-size: 4.5vw;
+}
+
+#success .container p {
+  font-size: 4vw;
+}
+
+#success .container a {
+  margin: 0;
+  font-size: 4vw;
+  align-items: center;
+  align-content: center;
 }
