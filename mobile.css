@@ -188,11 +188,13 @@ h2 {
   width: fit-content;
   margin: 2vw auto;
   background: rgba(51, 51, 51, 0.7);
+  font-size: 4.5vw;
 }
 
 .text-container-l p,
 .text-container-r p {
   background: rgba(51, 51, 51, 0.7);
+  font-size: 4vw;
 }
 
 .blank-container {
@@ -207,14 +209,15 @@ h2 {
   padding: 2vw 4vw;
   z-index: 5;
   background-color: transparent;
-  opacity: 0;
-  transition: opacity 0.5s ease;
+  opacity: 1;
+  /* transition: opacity 0.5s ease; */
 }
 
 #hw-container {
   margin: 0;
   margin-bottom: 5svh;
   position: relative;
+  opacity: 1;
 }
 
 .about-me-section .group .text-container h3 {
@@ -222,10 +225,12 @@ h2 {
   width: fit-content;
   margin: 2vw auto;
   background: rgba(51, 51, 51, 0.7);
+  font-size: 4.5vw;
 }
 
 .about-me-section .group .text-container p {
   background: rgba(51, 51, 51, 0.7);
+  font-size: 4vw;
 }
 
 .about-me-section .group .text-container .img-container {
@@ -323,10 +328,12 @@ h2 {
   padding-bottom: 0;
 }
 
-.project #lol {
+.project #azdaja-link,
+.project #golobe-link,
+.project #todoro-link {
   height: 33.71vw;
   width: 60vw;
-  background: #a4f644;
+  /* background: #a4f644; */
 }
 
 .project .text-group {
@@ -358,6 +365,12 @@ h2 {
 #more-1,
 #more-2,
 #more-3 {
+  display: none;
+}
+
+#dots-1,
+#dots-2,
+#dots-3 {
   display: none;
 }
 

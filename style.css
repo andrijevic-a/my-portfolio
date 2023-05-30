@@ -316,6 +316,13 @@ h2 {
 .text-container-l h3,
 .text-container-r h3 {
   text-align: left;
+  font-size: 1.6vw;
+  margin: 1vw 0;
+}
+
+.text-container-l p,
+.text-container-r p {
+  font-size: 1.4vw;
 }
 
 .blank-container {
@@ -331,9 +338,10 @@ h2 {
   border: #a4f644 dotted 0.2083vw;
   padding: 1vw 2vw;
   z-index: 5;
-  background-color: #333;
-  opacity: 0;
-  transition: opacity 0.5s ease;
+  background-color:rgba(51, 51, 51, 0.4);
+  opacity: 1;
+  /* transition: opacity 0.5s ease; */
+
 }
 
 #hw-container {
@@ -342,6 +350,12 @@ h2 {
 
 .about-me-section .group .text-container h3 {
   text-align: center;
+  font-size: 1.6vw;
+  margin: 1vw 0;
+}
+
+.about-me-section .group .text-container p {
+font-size: 1.4vw;
 }
 
 .about-me-section .group .text-container .img-container {
@@ -412,10 +426,33 @@ h2 {
   padding-bottom: 1vw;
 }
 
-.project #lol {
+.project #azdaja-link,
+.project #golobe-link,
+.project #todoro-link {
   height: 7.95vw;
   width: 14.151vw;
   background: #a4f644;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+.project #azdaja-link {
+  background: url('./img/slide/azdaja.png');
+  background-size: cover;
+}
+.project #golobe-link {
+  background: url('./img/slide/golobe-home.png');
+  background-size: cover;
+}
+.project #todoro-link {
+  background: url('./img/slide/todoro-home.png');
+  background-size: cover;
+}
+
+.project #azdaja-link:hover,
+.project #golobe-link:hover,
+.project #todoro-link:hover {
+  border: none;
 }
 
 .project .text-group {
@@ -424,10 +461,21 @@ h2 {
   width: 30vw;
 }
 
+.project .text-group a {
+  height: fit-content;
+  width: fit-content;
+  padding: 0;
+  margin: 0;
+}
+
 .project .text-group h4 {
   margin-top: 0;
   font-size: 1.25vw;
   margin-bottom: 1.25vw;
+}
+
+.project .text-group a h4:hover {
+  text-decoration: underline;
 }
 
 .project .text-group p {
