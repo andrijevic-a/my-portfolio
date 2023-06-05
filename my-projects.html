@@ -10,11 +10,24 @@
       media="screen and (max-width: 768px)"
       href="mobile.css"
     />
+    <script src="./loading.js" defer></script>
     <script src="./more-less.js" defer></script>
     <script src="./critic.js" defer></script>
     <title>My Portfolio | Aleksandar Andrijević</title>
   </head>
   <body>
+    <div id="loading-screen">
+      <div class="loading-animation">
+        <div class="loading-circle"></div>
+      </div>
+      <div id="loading">Loading
+        <span id="d1">.</span>
+        <span id="d2">.</span>
+        <span id="d3">.</span>
+      </div>
+      
+    </div>
+    
     <div id="my-projects">
       <nav>
         <a href="./index.html" class="home-btn"
